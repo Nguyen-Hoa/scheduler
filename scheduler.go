@@ -6,5 +6,5 @@ import (
 )
 
 type Scheduler interface {
-	Schedule(map[string]*worker.ManagerWorker, []job.Job) error
+	Schedule(map[string]*worker.ManagerWorker, job.SharedJobsArray) error
 }
