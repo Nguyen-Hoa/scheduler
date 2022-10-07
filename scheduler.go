@@ -10,6 +10,6 @@ type Job struct {
 	Duration int      `json:"duration"`
 }
 
-type scheduler interface {
+type Scheduler interface {
 	Schedule(*map[string]worker.ManagerWorker, *[]Job) error
 }
