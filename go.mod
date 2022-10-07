@@ -1,4 +1,4 @@
-module scheduler
+module github.com/Nguyen-Hoa/scheduler
 
 go 1.19
 
