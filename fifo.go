@@ -3,13 +3,14 @@ package scheduler
 import (
 	"errors"
 
+	job "github.com/Nguyen-Hoa/job"
 	"github.com/Nguyen-Hoa/worker"
 )
 
 type FIFO struct {
 }
 
-func (scheduler *FIFO) Schedule(workers map[string]*worker.ManagerWorker, jobs []Job) error {
+func (scheduler *FIFO) Schedule(workers map[string]*worker.ManagerWorker, jobs []job.Job) error {
 	if len(jobs) == 0 {
 		return nil
 	}

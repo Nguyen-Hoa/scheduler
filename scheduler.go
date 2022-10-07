@@ -1,15 +1,10 @@
 package scheduler
 
 import (
+	job "github.com/Nguyen-Hoa/job"
 	"github.com/Nguyen-Hoa/worker"
 )
 
-type Job struct {
-	Image    string   `json:"image"`
-	Cmd      []string `json:"cmd"`
-	Duration int      `json:"duration"`
-}
-
 type Scheduler interface {
-	Schedule(map[string]*worker.ManagerWorker, []Job) error
+	Schedule(map[string]*worker.ManagerWorker, []job.Job) error
 }
