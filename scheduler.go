@@ -11,5 +11,5 @@ type Job struct {
 }
 
 type Scheduler interface {
-	Schedule(*map[string]worker.ManagerWorker, *[]Job) error
+	Schedule(map[string]*worker.ManagerWorker, []Job) error
 }
